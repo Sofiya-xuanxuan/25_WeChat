@@ -66,7 +66,7 @@ const api = new wechatAPI(
 router.get('/getFollowers', async ctx => {
     let res = await api.getFollowers()
     res=await api.batchGetUsers(res.data.openid,'zh_CN')
-    ctx.body = res.data
+    ctx.body = res
 })
 
 
